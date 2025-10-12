@@ -1,4 +1,4 @@
-class FooterPage {
+class FooterComponent {
     elements = {
         // Social links loactors
         linkedinIcon: () => cy.get('a[href*="linkedin.com"]').invoke('removeAttr', 'target'),
@@ -25,4 +25,4 @@ class FooterPage {
     }
 }
 
-export default new FooterPage();
+export default FooterComponent

@@ -17,4 +17,4 @@ class Base {
         cy.visit('/' + path)
     }
 }
-export default Base;
+export default Base

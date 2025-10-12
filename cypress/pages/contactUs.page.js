@@ -23,7 +23,7 @@ class ContactUsPage extends BasePage {
     }
 
     open() {
-        super.open(this.endpoint);
+        super.open(this.endpoint)
     }
 }
-export default ContactUsPage;
+export default ContactUsPage
