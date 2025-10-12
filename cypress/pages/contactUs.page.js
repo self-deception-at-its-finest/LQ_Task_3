@@ -1,5 +1,6 @@
 import endpoints from '../constants/endpoints.constants.json'
 import BasePage from "./base.page"
+import {faker} from "@faker-js/faker";
 
 
 class ContactUsPage extends BasePage {
@@ -20,6 +21,15 @@ class ContactUsPage extends BasePage {
 
     submitButtonClick() {
         this.elements.submitButton().click()
+    }
+    formValidInput() {
+        this.elements.selectDropdown().select("Support")
+        this.elements.firstnameInput().type(faker.person.firstName())
+        this.elements.lastnameInput().type(faker.person.lastName())
+        this.elements.emailInput().type(faker.internet.email())
+        this.elements.websiteInput().type(faker.internet.domainName())
+        this.elements.additionalInfoInput().type(faker.lorem.paragraph(5))
+        this.elements.hearAboutInput().type(faker.lorem.paragraph(5))
     }
 
     open() {
