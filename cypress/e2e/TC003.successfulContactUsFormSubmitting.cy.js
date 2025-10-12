@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker'
 
 
 describe('Contact Us Form', () => {
-    it('Successfull submition of the “Contact Us” form with valid required fields',  () => {
+    it('Successful submitting of the “Contact Us” form with valid required fields',  () => {
         const contactUsPage = new ContactUsPage()
 
         contactUsPage.open()
@@ -17,7 +17,6 @@ describe('Contact Us Form', () => {
         contactUsPage.submitButtonClick()
 
         cy.url().should('include', '/thank-you-support')
-
 
     })
 })

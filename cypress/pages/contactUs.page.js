@@ -14,15 +14,13 @@ class ContactUsPage extends BasePage {
         additionalInfoInput: () => cy.get('textarea[name="Form_Additional_Information__c"]'),
         hearAboutInput: () => cy.get('input[name="How_did_you_hear_about_Telnyx_Open__c"]'),
         submitButton: () => cy.get('button[type="submit"]'),
-        invalidDropdownSelectMessage: () => cy.get('#ValidMsgReason_for_Contact__c')
+        invalidDropdownSelectMessage: () => cy.get('#ValidMsgReason_for_Contact__c'),
+        invalidEmailMessage: () => cy.contains('Must be valid email. ')
     }
 
     submitButtonClick() {
         this.elements.submitButton().click()
     }
-
-
-
 
     open() {
         super.open(this.endpoint);
