@@ -1,5 +1,4 @@
 import ContactUsPage from "../pages/contactUs.page"
-import { faker } from '@faker-js/faker'
 
 
 describe('Contact Us Form', () => {
