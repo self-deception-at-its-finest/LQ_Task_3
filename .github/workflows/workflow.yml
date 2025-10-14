@@ -30,15 +30,19 @@ jobs:
           browser: chrome
           headed: false
           record: false
-          command: npx cypress run --reporter mochawesome --reporter-options overwrite=false,html=false,json=true
+          command: npx cypress run --reporter mochawesome --reporter-options overwrite=false,html=false,json=true,reportDir=cypress/reports
 
 
       - name: Generate Mochawesome HTML report
         if: always()
         run: |
-          mkdir -p cypress/reports
-          npx mochawesome-merge cypress/reports/*.json > cypress/reports/output.json
-          npx marge cypress/reports/output.json --reportDir cypress/reports/html
+          mkdir -p cypress/reports/html
+          if compgen -G "cypress/reports/*.json" > /dev/null; then
+            npx mochawesome-merge cypress/reports/*.json > cypress/reports/output.json
+            npx marge cypress/reports/output.json --reportDir cypress/reports/html
+          else
+            echo "No JSON reports found. Skipping merge."
+          fi
 
 
       - name: Upload test artifacts
@@ -54,7 +58,7 @@ jobs:
 
       - name: Deploy HTML report to GitHub Pages
         if: always()
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-a ction@v4
         with:
           branch: test-reports
           folder: cypress/reports/html
