@@ -1,18 +1,5 @@
 class Base {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
      open(path = '') {
         cy.visit('/' + path)
     }

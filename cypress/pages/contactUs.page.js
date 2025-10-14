@@ -1,6 +1,6 @@
 import endpoints from '../constants/endpoints.constants.json'
 import BasePage from "./base.page"
-import {faker} from "@faker-js/faker";
+import {faker} from "@faker-js/faker"
 
 
 class ContactUsPage extends BasePage {

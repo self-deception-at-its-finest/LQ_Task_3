@@ -1,4 +1,3 @@
-import endpoints from '../constants/endpoints.constants.json'
 import HomePage from "../pages/home.page"
 import FooterComponent from "../pages/footer.component"
 

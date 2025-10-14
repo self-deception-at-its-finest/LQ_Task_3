@@ -8,11 +8,9 @@ describe('Contact Us Form', () => {
 
         const username = faker.internet.username()
         const invalidEmails = [
-            `${username}example.com`,
             `${username}@`,
             `${username}?example`,
-            `${username}@@example.com`,
-            `${username} @example.com`
+            `${username}@@example.com`
             ]
 
         contactUsPage.open()

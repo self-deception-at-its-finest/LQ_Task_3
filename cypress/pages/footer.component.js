@@ -3,7 +3,8 @@ class FooterComponent {
         // Social links loactors
         linkedinIcon: () => cy.get('a[href*="linkedin.com"]').invoke('removeAttr', 'target'),
         twitterIcon: () => cy.get('a[href="https://x.com/telnyx"]').invoke('removeAttr', 'target'),
-        facebookIcon: () => cy.get('a[href*="facebook.com"]').invoke('removeAttr', 'target')
+        facebookIcon: () => cy.get('a[href*="facebook.com"]').invoke('removeAttr', 'target'),
+        logoIcon: () => cy.get('html > body > div:nth-of-type(1) > div > footer > div:nth-of-type(1) > div:nth-of-type(1) > a > svg')
     }
 
     verifyLinkedin() {

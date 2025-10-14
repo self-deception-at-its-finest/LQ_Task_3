@@ -22,8 +22,11 @@ describe('Invalid endpoints', () => {
             .should("be.visible")
             .and("have.text", errorMessages.error404Message)
 
-        error404Page.elements.errorMessage()
+        error404Page.elements.errorSubMessage()
             .should("be.visible")
-            .and("have.text", errorMessages.error404Message)
+            .and("have.text", errorMessages.error404SubMessage)
+
+        error404Page.elements.backToHomeButton()
+            .should("be.visible")
     })
 })

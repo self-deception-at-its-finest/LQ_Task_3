@@ -1,6 +1,5 @@
 import ContactUsPage from "../pages/contactUs.page"
-import { faker } from '@faker-js/faker'
-
+import endpoints from '../constants/endpoints.constants.json'
 
 describe('Contact Us Form', () => {
     it('Successful submitting of the “Contact Us” form with valid required fields',  () => {
@@ -10,7 +9,7 @@ describe('Contact Us Form', () => {
         contactUsPage.formValidInput()
         contactUsPage.submitButtonClick()
 
-        cy.url().should('include', '/thank-you-support')
+        cy.url().should('include', `/${endpoints.successfulSubmitting}`)
 
     })
 })
