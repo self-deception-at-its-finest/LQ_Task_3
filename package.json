@@ -1,5 +1,5 @@
 {
-  "name": "autotest-telnix",
+  "name": "autotest-telnyx",
   "version": "1.0.0",
   "description": "Cypress tests for Telnyx",
   "scripts": {
@@ -23,16 +23,13 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "your-repository-url"
-  },
+
   "keywords": [
     "cypress",
     "testing",
     "e2e",
     "telnyx"
   ],
-  "author": "Your Name",
+  "author": "Mykhail Tkachenko",
   "license": "MIT"
 }
