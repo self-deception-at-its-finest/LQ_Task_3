@@ -63,3 +63,4 @@ jobs:
           branch: test-reports
           folder: cypress/reports/html
           clean: true
+          token: ${{ secrets.GH_PAT }}
