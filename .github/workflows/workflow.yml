@@ -58,7 +58,7 @@ jobs:
 
       - name: Deploy HTML report to GitHub Pages
         if: always()
-        uses: JamesIves/github-pages-deploy-a ction@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: test-reports
           folder: cypress/reports/html
