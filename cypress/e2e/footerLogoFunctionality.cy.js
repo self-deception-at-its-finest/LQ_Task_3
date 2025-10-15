@@ -10,6 +10,6 @@ describe('Footer', () => {
         pricingPage.open()
         footerComponent.elements.logoIcon().click()
 
-        cy.url().should('eq', 'https://telnyx.com/')
+        cy.url().should('eq', Cypress.config().baseUrl)
     })
 })

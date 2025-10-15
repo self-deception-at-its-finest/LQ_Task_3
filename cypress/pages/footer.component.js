@@ -1,28 +1,22 @@
 class FooterComponent {
     elements = {
         // Social links loactors
-        linkedinIcon: () => cy.get('a[href*="linkedin.com"]').invoke('removeAttr', 'target'),
-        twitterIcon: () => cy.get('a[href="https://x.com/telnyx"]').invoke('removeAttr', 'target'),
-        facebookIcon: () => cy.get('a[href*="facebook.com"]').invoke('removeAttr', 'target'),
+        linkedinIcon: () => cy.get('a[href*="linkedin.com"]'),
+        twitterIcon: () => cy.get('a[href*="x.com"]'),
+        facebookIcon: () => cy.get('a[href*="facebook.com"]'),
         logoIcon: () => cy.get('html > body > div:nth-of-type(1) > div > footer > div:nth-of-type(1) > div:nth-of-type(1) > a > svg')
     }
 
     verifyLinkedin() {
-        this.elements.linkedinIcon().click()
-        cy.url().should('include', 'linkedin.com')
-        cy.go(-1)
+        this.elements.linkedinIcon().should('have.attr', 'href', 'https://www.linkedin.com/company/telnyx')
     }
 
     verifyTwitter() {
-        this.elements.twitterIcon().click()
-        cy.url().should('include', 'x.com')
-        cy.go(-1)
+        this.elements.twitterIcon().should('have.attr', 'href', 'https://x.com/telnyx')
     }
 
     verifyFacebook() {
-        this.elements.facebookIcon().click()
-        cy.url().should('include', 'facebook.com')
-        cy.go(-1)
+        this.elements.facebookIcon().should('have.attr', 'href', 'https://www.facebook.com/Telnyx/')
     }
 }
 

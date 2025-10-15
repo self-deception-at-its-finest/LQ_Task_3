@@ -10,6 +10,6 @@ describe('Main navigation menu', () => {
         contactUsPage.open()
 
         headerComponent.elements.headerLogo().click()
-        cy.url().should('eq', 'https://telnyx.com/')
+        cy.url().should('eq', Cypress.config().baseUrl)
     })
 })

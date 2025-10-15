@@ -8,7 +8,7 @@ describe('Footer', () => {
         const footerComponent = new FooterComponent()
 
         homePage.open()
-        cy.url().should('eq', 'https://telnyx.com/')
+        cy.url().should('eq', Cypress.config().baseUrl)
 
         footerComponent.verifyLinkedin()
         footerComponent.verifyTwitter()
