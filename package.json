@@ -1,0 +1,38 @@
+{
+  "name": "autotest-telnyx",
+  "version": "1.0.0",
+  "description": "Cypress tests for Telnyx",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run-chrome": "cypress run --browser chrome",
+    "cy:run-headed": "cypress run --headed",
+    "cy:run-firefox": "cypress run --browser firefox",
+    "cy:run-edge": "cypress run --browser edge",
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:report": "cypress run --reporter cypress-mochawesome-reporter",
+    "report:generate": "npm run test:report && npm run report:merge && npm run report:generate-html",
+    "report:merge": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareport.json",
+    "report:generate-html": "marge cypress/reports/mochareport.json --reportDir cypress/reports/html --inline"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "cypress": "^15.4.0",
+    "cypress-mochawesome-reporter": "^3.7.0",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "e2e",
+    "telnyx"
+  ],
+  "author": "Mykhail Tkachenko",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
