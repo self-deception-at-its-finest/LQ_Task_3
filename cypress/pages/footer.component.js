@@ -2,7 +2,7 @@ class FooterComponent {
     elements = {
         // Social links loactors
         linkedinIcon: () => cy.get('a[href*="linkedin.com"]'),
-        twitterIcon: () => cy.get('a[href*="x.com"]'),
+        twitterIcon: () => cy.get('a[href*="https://x.com"]'),
         facebookIcon: () => cy.get('a[href*="facebook.com"]'),
         logoIcon: () => cy.get('html > body > div:nth-of-type(1) > div > footer > div:nth-of-type(1) > div:nth-of-type(1) > a > svg')
     }
